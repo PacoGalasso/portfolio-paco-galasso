@@ -1,0 +1,11 @@
+<section class="contact-section mt-5">
+  <h1 class="mb-4">Contact</h1>
+  <div class="d-flex justify-content-center gap-3 mb-5 ">
+    <div class="contact-card" *ngFor="let contact of contacts">
+      <a [href]="contact.link" target="_blank">
+        <i class="bi bi-{{ contact.icon }}"></i>
+        <span>{{ contact.label }}</span>
+      </a>
+    </div>
+  </div>
+</section>

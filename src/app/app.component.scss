@@ -1,0 +1,10 @@
+.nav-link {
+  --bs-nav-link-color: var(--bs-white);
+  --bs-nav-pills-link-active-color: var(--bs-primary);
+  --bs-nav-pills-link-active-bg: var(--bs-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,19 @@
+<div class="skills-container mt-5">
+  <h1 class="text-center mb-4">Mes compétences</h1>
+
+  <div class="category-buttons mb-4">
+    <button *ngFor="let cat of categories"
+            (click)="filterSkills(cat)"
+            [class.active]="selectedCategory === cat"
+            class="btn btn-outline-primary me-2">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div class="skills-list d-flex flex-wrap justify-content-center gap-4">
+    <div class="skill-card p-3 border" *ngFor="let skill of filteredSkills">
+      <img [ngSrc]="skill.icon" [alt]="skill.name" width="80" height="80" class="mb-2">
+      <h3 class="text-center">{{ skill.name }}</h3>
+    </div>
+  </div>
+</div>

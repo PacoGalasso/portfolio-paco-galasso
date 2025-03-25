@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+$body-bg: #F0FAFF;
+@import "bootstrap/scss/bootstrap";
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nom-stylise {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nom {
+  color: #007bff;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+.animate-nom {
+  animation: slideIn 1.2s ease-in-out forwards;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: $body-bg !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.download-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rocket-icon {
+  position: absolute;
+  top: 0;
+  right: -3rem;
+  font-size: 2rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rocket-icon.launch {
+  animation: rocketLaunch 1.5s ease-out forwards;
+}
+
+@keyframes rocketLaunch {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+}

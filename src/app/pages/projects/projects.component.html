@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <h2 class="text-center text-black mb-4">Mes Projets</h2>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+      <p-carousel [value]="cards" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="5000">
+        <ng-template pTemplate="item" let-card>
+          <div class="p-4 m-4 text-center shadow bg-white rounded">
+            <p class="text-lg font-semibold mb-3">
+              {{ card.message }}
+              <span *ngIf="card.type === 'construction'" class="ms-2 hammer-animation">
+                🔨
+              </span>
+            </p>
+            <a
+              *ngIf="card.type === 'construction'"
+              pButton
+              label="{{ card.linkLabel }}"
+              class="mt-2 p-button-primary"
+              disabled
+            ></a>
+
+            <a
+              *ngIf="card.type !== 'construction'"
+              pButton
+              [href]="card.link"
+              target="_blank"
+              label="{{ card.linkLabel }}"
+              class="mt-2 p-button-primary"
+            ></a>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hammer-animation {
+  display: inline-block;
+  animation: swing 1s infinite;
+}
+
+
+:host a.p-button-primary {
+  color: #fff !important;
+  text-decoration: none !important;
+}

@@ -1,0 +1,98 @@
+.title-animated-blue {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInDown 1s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-card {
+  width: 100%;
+  max-width: 350px;
+  background-color: #fff;
+  opacity: 1 !important;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.p-timeline-event-separator::before,
+.p-timeline-event-separator::after {
+  display: none !important;
+}
+
+.p-timeline-connector {
+  background-color: #ccc !important;
+  width: 2px !important;
+}
+
+
+.download-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rocket-icon {
+  position: absolute;
+  top: 0;
+  right: -3rem;
+  font-size: 2rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rocket-icon.launch {
+  animation: rocketLaunch 1.5s ease-out forwards;
+}
+
+@keyframes rocketLaunch {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+}
+
+.profile-photo {
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid #fff;
+}
