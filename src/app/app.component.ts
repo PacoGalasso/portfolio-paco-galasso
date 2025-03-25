@@ -5,11 +5,12 @@ import {FooterComponent} from './pages/footer/footer.component';
 import {SkillsComponent} from './pages/skills/skills.component';
 import {NavbarComponent} from './pages/navbar/navbar.component';
 import {ContactComponent} from './pages/contact/contact.component';
+import {HomeComponent} from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AboutComponent, ProjectsComponent, FooterComponent, SkillsComponent, NavbarComponent, ContactComponent],
+  imports: [AboutComponent, ProjectsComponent, FooterComponent, SkillsComponent, NavbarComponent, ContactComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
